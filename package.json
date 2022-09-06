@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "firebase": "^9.9.4",
+    "firebase-admin": "^11.0.1"
+  },
+  "name": "pokemongone",
+  "type": "module",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ganokpan/PokemonGone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ganokpan/PokemonGone/issues"
+  },
+  "homepage": "https://github.com/Ganokpan/PokemonGone#readme"
+}
