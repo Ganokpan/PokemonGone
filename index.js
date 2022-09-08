@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // Get a list of Pokemon from database เรียกใช้ข้อมูลโปเกม่อนทั้งหมดจากดาต้าเบส
-/*console.log("******List of Pokemon******");
+console.log("******List of Pokemon******");
 async function getpokemon(db) {
   const pokemon = collection(db, 'pokemon');
   const pokemonSnapshot = await getDocs(pokemon);

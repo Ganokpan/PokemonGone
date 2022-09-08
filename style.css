@@ -1,10 +1,60 @@
-body{
-    background-color: #021426;
+html,body{
+    background-color: #effabe;
     font-family: 'Acme', sans-serif;
+    height: 100%;
 }
 
-p{
-    text-align: center;
-    font-size: 46pt;
-    margin-top: 5;
+header {
+    background-color: #0023e679
 }
+
+.menu {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+#buttontype{
+    width: 150px;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(0, 23, 195);
+    color: azure;
+    margin: 10px;
+    border: 3px solid #fdf873;
+    font-size: large;
+}
+
+.container{
+	margin: 0px auto;
+	width: 100%;
+    margin-top: 60px;
+}
+
+.column{
+    margin: 10px;
+    background-color: rgb(212, 231, 255);
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;
+    height: 300px;
+}
+
+#pokeball{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 576px){
+    .row{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 990px){
+    .row{
+        justify-content: center;
+    }
+}
+
