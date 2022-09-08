@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // Get a list of Pokemon from database เรียกใช้ข้อมูลโปเกม่อนทั้งหมดจากดาต้าเบส
-console.log("******List of Pokemon******");
+/*console.log("******List of Pokemon******");
 async function getpokemon(db) {
   const pokemon = collection(db, 'pokemon');
   const pokemonSnapshot = await getDocs(pokemon);
@@ -30,7 +30,6 @@ async function getpokemon(db) {
   return pokemonList;
 }
 const pokemon = await getpokemon(db);
-var i = 0;
 console.log(pokemon); //พิมพ์ข้อมูลของธาตุGroundทั้งหมด
 
 // Get a list of ground from database เรียกใช้ข้อมูลธาตุดินจากดาต้าเบส
@@ -42,7 +41,6 @@ async function getground(db) {
   return groundList;
 }
 const ground = await getground(db);
-var i = 0;
 console.log(ground); //พิมพ์ข้อมูลของธาตุGroundทั้งหมด
 
 //Get a list of fire from database เรียกใช้ข้อมูลธาตุไฟจากดาต้าเบส
@@ -54,7 +52,6 @@ async function getfire(db) {
   return fireList;
 }
 const fire = await getfire(db);
-var i = 0;
 console.log(fire);//พิมพ์ข้อมูลของธาตุFireทั้งหมด
 
 //Get a list of dark from database เรียกใช้ข้อมูลธาตุมืดจากดาต้าเบส
@@ -66,7 +63,6 @@ async function getdark(db) {
   return darkList;
 }
 const dark = await getdark(db);
-var i = 0;
 console.log(dark);//พิมพ์ข้อมูลของธาตุมืดทั้งหมด
 
 //Get a list of psychic from database เรียกใช้ข้อมูลธาตุpsychicจากดาต้าเบส
@@ -78,7 +74,6 @@ async function getpsychic(db) {
   return psychicList;
 }
 const psychic = await getpsychic(db);
-var i = 0;
 console.log(psychic);//พิมพ์ข้อมูลของธาตุpsychicทั้งหมด
 
 //Get a list of water from database เรียกใช้ข้อมูลธาตุน้ำจากดาต้าเบส
@@ -90,9 +85,10 @@ async function getwater(db) {
   return waterList;
 }
 const water = await getwater(db);
-var i = 0;
-console.log(water);//พิมพ์ข้อมูลของธาตุน้ำทั้งหมด
+console.log(water);//พิมพ์ข้อมูลของธาตุน้ำทั้งหมด*/
 
+
+/*ยังทำไม่ได้ 
 //Add a new document in collection เพิ่มข้อมูลลงในDatabase 
 const data = {
   name: 'Zangoose',
@@ -105,14 +101,49 @@ const data = {
 console.log("*****Add data to database****");
 console.log(data);
 
+import { doc, setDoc } from "firebase/firestore"; 
 
+// Add a new document in collection "cities"
+await setDoc(doc(db, "cities", "LA"), {
+  name: "Los Angeles",
+  state: "CA",
+  country: "USA"
+});
+console.log("******List of Pokemon dark type******");
+async function getdark(db) {
+  const dark = collection(db, 'dark');
+  const darkSnapshot = await getDocs(dark);
+  const darkList = darkSnapshot.docs.map(doc => doc.data());
+  return darkList;
+}
+const dark = await getdark(db);
+var i = 0;
+console.log(dark);//พิมพ์ข้อมูลของธาตุมืดทั้งหมด
 
-//คำสั่งแสดงคำบนหน้าเว็บ local host
-/*import http from 'http';
-http
-  .createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-  })
-  .listen(1337, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:1337/');*/
+/*const docRef = collection(db, 'dark');
+
+await docRef.set({
+  name: 'Zangoose',
+  abilities: 'Cat Ferret Pokémon',
+  types: 'Normal',
+  species: 'Immunity',
+  id: '335',
+  types2: 'None'
+});*/
+
+//คำสั่งแสดงคำบนหน้าเว็บ local host port 8080
+import http from 'http'
+import fs from 'fs'
+
+const PORT=8080; 
+
+fs.readFile('index.html', function (err, html) {
+
+    if (err) throw err;    
+
+    http.createServer(function(request, response) {  
+        response.writeHeader(200, {"Content-Type": "text/html"});  
+        response.write(html);  
+        response.end();  
+    }).listen(PORT);
+});
