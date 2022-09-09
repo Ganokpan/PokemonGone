@@ -43,6 +43,28 @@
             border: 3px solid #fdf873;
             font-size: large;
         }
+
+        .container {
+            margin: 0px auto;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .column {
+            margin: 10px;
+            background-color: rgb(212, 231, 255);
+            border-radius: 20px;
+            text-align: center;
+            width: 250px;
+            height: 300px;
+            color: rgb(0, 0, 0);
+        }
+
+        #pokeball {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -57,7 +79,35 @@
         </div>
     </header>
     <main>
-        <h1>Hello Word</h1>
+        <section class="container" id="section">
+            <h2 style="text-align: center;">List of Pokemon yon can find</h2>
+            <div class="row">
+                <!--*****Don't have anything*****-->
+                <div class="column" id="column-dark">
+                    <img src="https://www.pngmart.com/files/2/Pokeball-PNG-Photos.png" id="pokeball">
+                    <!--<p style="font-size: 30pt;" id="absol"></p>-->
+                </div>
+                <div class="column" id="column-dark">
+                    <div class="column-title">
+                        <img src="https://www.pngmart.com/files/2/Pokeball-PNG-Photos.png" id="pokeball">
+                        <!--<p style="font-size: 30pt;" id="poochyena"></p>-->
+                    </div>
+                </div>
+
+                <div class="column" id="column-dark">
+                    <div class="column-title">
+                        <img src="https://www.pngmart.com/files/2/Pokeball-PNG-Photos.png" id="pokeball">
+                        <!--<p style="font-size: 30pt;" id="purrloin"></p>-->
+                    </div>
+                </div>
+                <div class="column" id="column-dark">
+                    <div class="column-title">
+                        <img src="https://www.pngmart.com/files/2/Pokeball-PNG-Photos.png" id="pokeball">
+                        <!--<p style="font-size: 30pt;" id="umbreon"></p>-->
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 

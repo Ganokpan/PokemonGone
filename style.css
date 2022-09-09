@@ -38,6 +38,27 @@ header {
     text-align: center;
     width: 250px;
     height: 300px;
+    color: rgb(0, 0, 0);
+}
+
+#column-dark{
+    background-color: rgba(41, 33, 27, 0.662);
+    color:aliceblue;
+}
+
+#column-ground{
+    background-color: rgba(143, 72, 6, 0.662);
+    color:aliceblue;
+}
+
+#column-fire{
+    background-color: rgba(153, 18, 13, 0.662);
+    color:aliceblue;
+}
+
+#column-psychic{
+    background-color: rgba(59, 34, 160, 0.662);
+    color:aliceblue;
 }
 
 #pokeball{
